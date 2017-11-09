@@ -26,6 +26,10 @@ set mouse=a
 " Enable hidden buffers
 set hidden
 
+" Sets the line number bar
+set nu
+set relativenumber
+
 set laststatus=2
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
