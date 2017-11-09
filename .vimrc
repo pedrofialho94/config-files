@@ -12,6 +12,8 @@ Plug 'junegunn/fzf.vim'
 "TODO: document YCM dependencies
 Plug 'valloric/youcompleteme'
 
+Plug 'airblade/vim-gitgutter'
+
 call plug#end()
 
 filetype plugin indent on
