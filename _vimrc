@@ -4,15 +4,9 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'itchyny/lightline.vim'
-"ack.vim depends on ag utility (apt-get install silversearcher-ag)
-"Plug 'mileszs/ack.vim'
 "TODO: check if fzf and fzf.vim depend on fzf shell package
-"Plug 'junegunn/fzf'
-"Plug 'junegunn/fzf.vim'
-"TODO: document YCM dependencies
-"Plug 'valloric/youcompleteme'
-
-Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -35,6 +29,9 @@ set hidden
 set nu
 set relativenumber
 
+" Sets the folding method
+set foldmethod=syntax
+
 set laststatus=2
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
@@ -50,6 +47,5 @@ let g:netrw_winsize = 25
 
 augroup ProjectDrawer
     autocmd!
-"    autocmd VimEnter * if argc() == 0 | Explore! | endif
     autocmd VimEnter * Vexplore
 augroup END
