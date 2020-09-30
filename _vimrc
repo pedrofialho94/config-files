@@ -8,10 +8,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
+"ack.vim depends on ag utility (apt-get install silversearcher-ag)
+Plug 'mileszs/ack.vim'
+
 call plug#end()
 
 " Set choloscheme
-colorscheme pablo
+colorscheme desert
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -49,3 +52,13 @@ augroup ProjectDrawer
     autocmd!
     autocmd VimEnter * Vexplore
 augroup END
+
+" Configures ack.vim to use Ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" Configures font for gVim
+if has("gui_running")
+  set guifont=Consolas:h9:cANSI:qDRAFT
+endif
