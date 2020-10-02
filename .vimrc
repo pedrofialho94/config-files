@@ -39,20 +39,6 @@ set laststatus=2
 let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
-" Sets vertical split to the right to keep netrw to the left
-" set splitright
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-
-augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * Vexplore
-augroup END
-
 " Configures ack.vim to use Ag
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
