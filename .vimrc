@@ -13,6 +13,13 @@ Plug 'mileszs/ack.vim'
 
 call plug#end()
 
+" Lightline configs
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'ayu_light',
+      \ }
+
 " Set choloscheme
 colorscheme desert
 
@@ -48,3 +55,4 @@ endif
 if has("gui_running")
   set guifont=Consolas:h9:cANSI:qDRAFT
 endif
+
