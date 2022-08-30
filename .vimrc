@@ -11,6 +11,11 @@ Plug 'junegunn/fzf.vim'
 "ack.vim depends on ag utility (apt-get install silversearcher-ag)
 Plug 'mileszs/ack.vim'
 
+Plug 'tpope/vim-fugitive'
+
+Plug 'valloric/youcompleteme'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
 " Lightline configs
@@ -21,7 +26,7 @@ let g:lightline = {
       \ }
 
 " Set choloscheme
-colorscheme desert
+colorscheme elflord
 
 filetype plugin indent on
 " show existing tab with 4 spaces width
@@ -44,7 +49,7 @@ set foldmethod=syntax
 
 set laststatus=2
 let g:ackprg = 'ag --nogroup --nocolor --column'
-let g:ycm_server_python_interpreter = '/usr/bin/python2'
+" let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
 " Configures ack.vim to use Ag
 if executable('ag')
@@ -56,3 +61,7 @@ if has("gui_running")
   set guifont=Consolas:h9:cANSI:qDRAFT
 endif
 
+set clipboard=unnamedplus
+
+command Gtdef YcmCompleter GoToDefinition
+command Gtdec YcmCompleter GoToDeclaration
