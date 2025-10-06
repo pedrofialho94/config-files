@@ -1,0 +1,3 @@
+return {
+	'jodosha/vim-godebug'
+}
